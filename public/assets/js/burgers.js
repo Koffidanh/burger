@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         button.addEventListener('click', (e) => {
           // Grabs the id of the element that goes by the name, "id"
           const id = e.target.getAttribute('data-id');
-          const newSleep = e.target.getAttribute('data-newsleep');
+          const newDevoured = e.target.getAttribute('data-newdevoured');
   
           const newDevouredState = {
             devoured: newDevoured,
@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
         // Grabs the value of the textarea that goes by the name, "quote"
         const newBurger = {
-          name: document.getElementById('ca').value.trim(),
-          burger: document.getElementById('burger').checked,
+          burger_name: document.getElementById('bu').value.trim(),
+          //devoured: document.getElementById('devoured'),
         };
   
         // Send POST request to create a new quote
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           body: JSON.stringify(newBurger),
         }).then(() => {
           // Empty the form
-          document.getElementById('ca').value = '';
+          document.getElementById('bu').value = '';
   
           // Reload the page so the user can see the new quote
           console.log('Created a new Burger!');
@@ -76,6 +76,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     }
   
-  
+  // DELETE
+  const deleteBurgerBtns = document.querySelectorAll('.delete-burger');
+
+  // Set up the event listeners for each delete button
+  deleteBurgerBtns.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      const id = e.target.getAttribute('data-id');
+
+      // Send the delete request
+      fetch(`/api/burgers/${id}`, {
+        method: 'DELETE',
+      }).then((res) => {
+        console.log(res);
+        console.log(`Deleted burger: ${id}`);
+
+        // Reload the page
+        location.reload();
+      });
+    });
   });
+});
+
+
   
