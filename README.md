@@ -28,7 +28,7 @@
   No Test required. 
 ## Video demo
 Here is the demo video.
-![demo](https://github.com/Koffidanh/burger/blob/main/assets/images/demo.gif)
+![demo](https://github.com/Koffidanh/burger/blob/main/views/images/demo.gif)
  ## License
  Licensed under the MIT.
   
