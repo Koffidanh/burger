@@ -33,6 +33,7 @@ Here is the demo video.
  ## License
  Licensed under the MIT.
   
+<<<<<<< HEAD
 =======
 # burger
 # burger
@@ -41,3 +42,7 @@ Here is the demo video.
 # burger
 # burger
 >>>>>>> parent of 0a8401b (uploading the demo)
+=======
+
+>>>>>>> 919b274d36bfa3135b155ba25281b5c429865149
+# burger
