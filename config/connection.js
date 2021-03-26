@@ -2,7 +2,13 @@
 const mysql = require('mysql');
   require('dotenv').config()
 
- const connection = mysql.createConnection({
+
+  let db;
+if (process.env.JAWSDB_URL) {
+    db = mysql.createConnection(process.env.JAWSDB_URL)
+} else {
+
+db = mysql.createConnection({
   host: 'localhost',
   port: 3306,
   user: 'root',
@@ -10,15 +16,15 @@ const mysql = require('mysql');
   password: process.env.PASSWORD,
   database: 'burgers_db',
 });
-
+}
 // Make connection.
-connection.connect((err) => {
+db.connect((err) => {
   if (err) {
     console.error(`error connecting: ${err.stack}`);
     return;
   }
-  console.log(`connected as id ${connection.threadId}`);
+  console.log(`connected as id ${db.threadId}`);
 });
 
 // Export connection for our ORM to use.
-module.exports = connection;
+module.exports = db;
