@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
   # Burger Logger
   ![badge](https://img.shields.io/badge/License-MIT-brightgreen)
@@ -33,16 +33,4 @@ Here is the demo video.
  ## License
  Licensed under the MIT.
   
-<<<<<<< HEAD
-=======
-# burger
-# burger
-# burger
-# burger
-# burger
-# burger
->>>>>>> parent of 0a8401b (uploading the demo)
-=======
 
->>>>>>> 919b274d36bfa3135b155ba25281b5c429865149
-# burger
