@@ -1,5 +1,4 @@
-const http = require('http');
-const cluster = require('cluster');
+
 const express = require('express');
 
 const PORT = process.env.PORT || 8080;
@@ -28,20 +27,6 @@ const routes = require('./controllers/burgers_controller.js');
 app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-// app.listen(PORT, () =>
-//   console.log(`Server listening on: http://localhost:${PORT}`)
-// );
-
-if (cluster.isWorker) {
-  http.createServer((req, res) => {
-    //req.socket.destroy(); // this will also create an H13
-    throw new Error('We throw an error before sending a response');
-    res.end('ok');
-  }).listen(PORT);
-}
-else {
-  cluster.fork();
-  cluster.on('exit', () => {
-    cluster.fork();
-  })
-}
+app.listen(PORT, () =>
+  console.log(`Server listening on: http://localhost:${PORT}`)
+);
