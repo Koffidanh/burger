@@ -3,7 +3,7 @@
   # Burger Logger
   ![badge](https://img.shields.io/badge/License-MIT-brightgreen)
  ## The Repository
- This 'Burger Logger ' was created using MySQL, Node , Express, Handlebars and a ORM. It was created to log in your favorite burger that you wish to eat and then devours it after you ate one in really life. Burger Logger](https://limitless-hamlet-20887.herokuapp.com/)
+ This 'Burger Logger ' was created using MySQL, Node , Express, Handlebars and a ORM. It was created to log in your favorite burger that you wish to eat and then devours it after you ate one in really life. Burger Logger](https://rhubarb-surprise-45818.herokuapp.com/)
 
    ## Table of Contents
    ### * [Installation](#installation)
